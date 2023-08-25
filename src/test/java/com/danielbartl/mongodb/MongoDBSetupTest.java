@@ -24,7 +24,7 @@ public class MongoDBSetupTest {
 
             try (final var client = MongoClients.create(mongoDBContainer.getConnectionString())) {
 
-                final ArrayList<String> list = client.listDatabaseNames().into(new ArrayList<>());
+                final var list = client.listDatabaseNames().into(new ArrayList<>());
 
                 assertEquals(3, list.size());
 
